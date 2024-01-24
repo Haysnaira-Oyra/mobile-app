@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>2201301125 | Ariansyah Aryo Prasetio</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="danger">
+      <ion-title size="large">2201301125 | Ariansyah Aryo Prasetio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card *ngFor="let item of tutorial">
+    <img src="{{foto}}?sig={{item.id}}" />
+    <ion-card-header>
+      <ion-card-title>{{ item.title }}</ion-card-title>
+      <ion-card-subtitle>{{ item.tanggal }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content> {{ item.description }} </ion-card-content>
+  </ion-card>
+</ion-content>
